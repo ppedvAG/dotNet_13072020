@@ -1,0 +1,16 @@
+﻿<Window x:Class="HalloEF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HalloEF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <WrapPanel DockPanel.Dock="Top">
+            <Button Click="Laden">Laden</Button>
+            <Button Click="Speichern">Speichern</Button>
+        </WrapPanel>
+        <DataGrid x:Name="myGrid"/>
+    </DockPanel>
+</Window>

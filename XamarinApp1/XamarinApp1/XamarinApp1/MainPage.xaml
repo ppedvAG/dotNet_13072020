@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinApp1.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label Text="Welcome to Xamarin.Forms!" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+        <Label Text="Welcome to Xamarin.Forms!"  FontSize="Title"
+           HorizontalOptions="Start"/>
+        <Label BackgroundColor="Beige" VerticalOptions="CenterAndExpand" FontSize="Large"
+                    Rotation="{Binding Path=Value}"
+            BindingContext="{x:Reference sl1}" Text="{Binding Value}"/>
+        <Slider x:Name="sl1" Maximum="360" VerticalOptions="Start" HeightRequest="60"/>
+    </StackLayout>
+
+</ContentPage>

@@ -1,4 +1,6 @@
-﻿using System.Net.Http;
+﻿using Newtonsoft.Json;
+using System.Linq;
+using System.Net.Http;
 using System.Windows;
 
 namespace REST_GoogleBooks_Client
@@ -20,6 +22,10 @@ namespace REST_GoogleBooks_Client
             var http = new HttpClient();
             var json = await http.GetStringAsync(url);
             jsonTb.Text = json;
+
+            BooksResult result = JsonConvert.DeserializeObject<BooksResult>(json);
+            myGrid.ItemsSource = result.items.Select(x => x.volumeInfo);
         }
+
     }
 }
